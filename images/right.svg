@@ -1,0 +1,12 @@
+<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(180 14.1751 13.3226)" id="svg_7">
+   <line transform="rotate(45 12.4663 7.94091)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="15.83667" x2="12.34844" y1="0.04515" x1="12.58413" stroke="#ffc938" fill="none"/>
+   <line transform="rotate(-45 12.4663 18.5864)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="26.4822" x2="12.34844" y1="10.69068" x1="12.58413" stroke="#ffc938" fill="none"/>
+   <line transform="rotate(45 15.8839 8.05876)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="15.95452" x2="15.76601" y1="0.163" x1="16.0017" stroke="#ffc938" fill="none"/>
+   <line transform="rotate(-45 15.8839 18.7043)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="26.60004" x2="15.76601" y1="10.80853" x1="16.0017" stroke="#ffc938" fill="none"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,1567 @@
+:root{
+    --sectionColor:white;
+    --secondarySectionColor:rgb(230, 230, 230);
+    --buttonColor:rgb(253, 197, 42);
+
+
+    --mainTextColor: rgb(0, 0, 0);
+    --secondaryTextcolor:white;
+    
+    --navMainColor:rgba(0, 0, 0, 0.562);
+   
+    
+    
+}
+html{
+    
+}
+
+body{
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-y: repeat(300px);
+}
+body>div{
+    scroll-snap-align: start;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+   
+   
+}
+.header{
+    font-size:calc(4vw + 10px) ;
+    text-align: center;
+    color: var(--buttonColor);
+    margin-bottom: 10px;
+}
+.subheader{
+    font-size:calc(3vw + 10px) ;
+    text-align: center;
+}
+.section{
+    position: relative;
+    
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
+
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/*------------shape divider 2 ------------*/
+.custom-shape-divider-bottom-1627663580 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+}
+
+.custom-shape-divider-bottom-1627663580 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+   
+}
+
+.custom-shape-divider-bottom-1627663580 .shape-fill {
+    fill: var(--secondarySectionColor);
+    height: 200px;
+    
+}
+
+.big-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+    background-position-x: center;
+    background-color: black;
+    object-fit: cover;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    /*---------HERE TO MOVE THE HEADER BACKGROUND-----------*/
+    transform: translateX(0%);
+    
+}
+/*--------------------CAROUSSEL----------------*/
+.big-bg{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.big-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .3;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+} 
+.caroussel{
+    position: absolute;
+  
+    background-color: rgb(15, 15, 15);
+
+   
+    width:100%;
+    height:100%;
+
+}
+.slides-container{
+    position: relative;
+    list-style-type: none;
+    width:90%;
+    height:100%;
+    left:5%;
+    z-index: 2;
+    
+}
+.slides{
+    position: relative;
+    list-style-type: none;
+   
+   
+    width:100%;
+    height:100%;
+}
+.slide{
+    position: absolute;
+    width:100%;
+    height:100%;
+    transform: scale(140%);
+    opacity:.3;
+   
+    
+   
+}
+.slide.current_slide{
+    z-index: 3;
+    transform: scale(100%);
+    opacity:1;
+    transition: transform .8s ease-in;
+   
+
+
+}
+.slide.current_slide img{
+    filter: brightness(60%);
+
+   
+
+
+}
+
+.slide__image{
+  
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.slider__content{
+   position: absolute;
+   bottom:50%;
+   left: 50%;
+   transform: translate(-50%,50%);
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   
+}
+.left-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    top:50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+.left-button img{
+    width: 100%;
+    transform: scale(100%);
+    transition: transform .5s;
+}
+.left-button img:hover{
+   
+    transform: scale(110%);
+    transition: transform .5s;
+}
+.right-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top:50%;
+    transform: translateY(-50%);
+    right: 0%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 6;
+}
+.right-button img{
+    width: 100%;
+    transition: transform .5s;
+}
+.right-button img:hover{
+   transition: transform .5s;
+    transform: scale(110%);
+}
+.caroussel__nav{
+    position: absolute;
+    
+   bottom: 15%;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 5px 0;
+   z-index: 6;
+    
+}
+.caroussel__indicator{
+    position: relative;
+    border : 2px solid;
+    border-color:var(--buttonColor) ;
+    background-color: transparent;
+    width:15px;
+    height:15px;
+    
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+   
+}
+.caroussel__indicator.current_slide{
+   background-color: rgb(255, 209, 5);
+
+}
+
+/*SECTIONS-------------------------------------------------*/
+.section1{
+    position: relative;
+    background-color: var(--secondarySectionColor);
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+.programmes-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "programmes-area programmes-area"
+    "licenses-area masters-area"
+    ;
+    gap:40px;
+    padding: 20px;
+    padding-bottom:100px;
+    
+
+
+}
+.programmes-area{
+    grid-area: programmes-area;
+    position: relative;
+    height: 8em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.licenses-area{
+    grid-area: licenses-area;
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    min-height: 200px;
+    height:100%; 
+}
+.masters-area{
+    grid-area: masters-area;
+    display: flex;
+    justify-self: start;
+    
+    justify-content: center;
+    min-height: 200px;
+    height:100%; 
+}
+
+.under-line{
+    position: relative;
+    height: 3px;
+    width:10%;
+    border-radius: 2px;
+    background-color: black;
+   
+}
+.programmes-types{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.words{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:60%;
+    max-width:400px;
+    width: 100%;
+    
+}
+
+.number{
+    font-size: 130px;
+    margin-right: 20px;
+    color: var(--buttonColor);
+}
+/*Section 2 CSS----------------------------------------------------------------*/
+.section2{
+   position: relative;
+    background-color: var(--sectionColor);
+    
+   
+    width: 100%;
+    overflow-x: hidden;
+   
+    overflow-y: hidden;
+    
+
+    
+    
+}
+.yellowthing{
+    color: var(--buttonColor);
+}
+.degree {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.button{
+    position: relative;
+    background-color: var(--buttonColor);
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    cursor: pointer;
+    overflow:hidden;
+   
+}
+.button::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    
+    height: 6px;
+    background-color: rgb(233, 171, 1);
+    bottom: 0px;
+    left: 0px;
+    transform: translateY(100%);
+    transition: transform .4s;
+}
+
+.button:hover::after{
+    transform: translateY(0%);
+    transition: transform .4s;
+    
+}
+.image2{
+    position: relative;
+  
+   
+    
+   
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height:100%;
+    overflow-y: hidden;
+    
+    
+}
+.image2 img{
+    width: 100%;
+    height:100%;
+   
+}
+
+.image1{
+    position: relative;
+  
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height:100%;
+    overflow-y: hidden;
+    
+    
+  
+}
+.image1 img{
+    width: 100%;
+    height:100%;
+}
+.image1:hover .img-underline{
+    transform: translateY(0%);
+    transition: .4s;
+}
+.image2:hover .img-underline{
+    transform: translateY(0%);
+    transition: .4s;
+}
+.img-underline{
+    position: absolute;
+    width:100%;
+    height: 20px;
+    background-color: var(--buttonColor);
+    bottom:0%;
+    transform: translateY(100%);
+    transition: .4s;
+}
+.why-grid{
+    position: relative;
+    width:80%;
+    
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "title-area title-area"
+    "left-area right-area"
+    "formation presentation"
+    ;
+   
+    padding-bottom:100px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    
+}
+.left-area
+{
+    position: relative;
+    grid-area: left-area;
+    display: flex;
+    
+    justify-content: center;
+   
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    
+}
+.disappear{
+    opacity:0%;
+   
+}
+.appear{
+    
+    animation: appear 1s;
+}
+@keyframes appear {
+    0%{
+        opacity:0%;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity:100%;
+        transform: translateY(0%);
+    }
+}
+
+
+.right-area{
+    position: relative;
+    grid-area: right-area;
+    display: flex;
+    
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+.title-area
+{
+    grid-area: title-area;
+    position: relative;
+    min-height: 8em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+   
+  
+}
+.formation{
+    grid-area: formation;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: end;
+   
+   
+    width: 100%;
+    margin-bottom: 50px;
+    
+}
+.presentation{
+    grid-area: presentation;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: end;
+   
+    width: 100%;
+    margin-bottom: 50px;
+    
+   
+}
+.desc {
+ 
+ margin-bottom: 10px;
+ text-align: center;
+ 
+}
+/*section3 CSS--------------------------------------*/
+.section3{
+
+    position: relative;
+    background-color: var(--secondarySectionColor);
+    
+    
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+   
+    
+}
+
+.process-grid{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto auto  ;
+    grid-template-areas: 
+    "title3 title3 title3"
+    "area1 area2 area3"
+    ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0%;
+    gap:60px;
+    padding-bottom: 100px;
+}
+.title3{
+    grid-area: title3;
+    position: relative;
+    height: 8em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.section-title{
+    text-align: center;
+}
+
+.area1{
+    grid-area: area1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: fit-content;
+    animation-duration: .4s;
+}
+.area2{
+    grid-area: area2;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: fit-content;
+    animation-duration: .6s;
+}
+.area3{
+    grid-area: area3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: fit-content;
+    animation-duration: 1s;
+}
+.main-rec{
+    position: relative;
+    min-height:200px;
+    min-width: 200px;
+    max-height: 200px;
+    max-width: 400px;
+    width:100%;
+    height:100%;
+    
+}
+.bubble{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-items: center;
+    
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow .4s;
+    
+}
+.bubble:hover{
+    -webkit-box-shadow: 6px 5px 0px 3px var(--buttonColor); 
+box-shadow: 6px 5px 0px 3px var(--buttonColor);
+    transition: box-shadow .4s;
+}
+.bubble-title{
+    margin-top:010%;
+    margin-bottom: 05%;
+   text-align: center;
+}
+.bubble-desc{
+    text-align: center;
+}
+.circle{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 6em;
+   max-height: 6em;
+   
+    height:100% ;
+    width:100%;
+    border-radius: 50%;
+    background-color:var(--buttonColor);
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.circle-text{
+    color: white;
+    font-size: 4em;
+}
+
+
+/*section4-----------------------------------------------------------------------*/
+.section4{
+    position: relative;
+    background-color:var(--sectionColor);
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.campus-grid{
+    display: grid;
+    width: 70%;
+    grid-template-columns: 1f 1f 1f 1f;
+    grid-template-rows: auto auto;
+
+    grid-template-areas: 
+    "title4 title4 title4 title4"
+    "first-area second-area third-area fourth-area"
+    ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0%;
+    gap:40px;
+    padding-bottom: 100px;
+}
+.title4{
+    grid-area: title4;
+    position: relative;
+    height: 8em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.section-title4{
+    text-align: center;
+}
+
+.first-area{
+    
+    grid-area: first-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    animation-duration: .4s;
+}
+.second-area{
+    grid-area: second-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation-duration: .6s;
+}
+.third-area{
+    grid-area: third-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation-duration: .8s;
+}
+.fourth-area{
+    grid-area: fourth-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation-duration: 1s;
+}
+
+.img-section{
+    position: relative;
+  
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform .4s;
+}
+.img-section img{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+    transition:border-radius .4s;
+}
+.img-section:hover {
+    transition: transform .4s;
+    transform: scale(110%);
+    cursor: pointer;
+}
+.description{
+    margin-bottom: 30px;
+}
+/*section5--------------------------------------------*/
+
+.section5{
+    position: relative;
+    background-color: var(--secondarySectionColor);
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.inscription-grid{
+    width:45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas: 
+    "title5 title5 title5 title5"
+    "first-area1 second-area1 third-area1 fourth-area1"
+    ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0%;
+    gap:40px;
+    padding-bottom: 100px;
+}
+.title5{
+    grid-area: title5;
+    position: relative;
+    height: 8em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.title5 h1{
+    color: white;
+}
+.first-area1{
+    
+    grid-area: first-area1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.second-area1{
+    grid-area: second-area1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.third-area1{
+    grid-area: third-area1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.fourth-area1{
+    grid-area: fourth-area1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.time-container{
+   max-width: 10em;
+   max-height: 10em;
+   width: 100%;
+    height:100%;
+}
+.circle-bg{
+    position: relative;
+    
+    min-width: 8em;
+    
+    width: 100%;
+    padding-bottom: 100%;
+    
+   
+}
+.section5-bg{
+    position: absolute;
+    object-fit: cover;
+     width: 100%;
+    height:100%;
+    
+     
+ }
+.time-circle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 4px;
+    border-color: var(--buttonColor);
+    border-style: solid;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.time-circle h3{
+    color: white;
+}
+.time-circle h1{
+    color: white;
+}
+/*section6------------------------------------*/
+.section6{
+    position: relative;
+    background-color: var(--secondarySectionColor);
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.contacts-grid{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto auto  ;
+    grid-template-areas: 
+    "title6 title6 title6"
+    "logo-area contacts-area socials-area"
+    ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0%;
+    gap:60px;
+    padding-bottom: 100px;
+}
+.title6{
+    grid-area: title6;
+    position: relative;
+    height: 8em;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.section-title{
+    text-align: center;
+}
+
+.logo-area{
+    grid-area: logo-area;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: fit-content;
+}
+.contacts-area{
+    grid-area: contacts-area;
+    
+    position: relative;
+    display: flex;
+   
+    justify-content: center;
+    
+   
+    height: fit-content;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+.phone-numbers{
+    display: inline-flex;
+    
+}
+.emails{
+    display: inline-flex;
+   
+}
+.socials-area{
+    grid-area: socials-area;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    height: fit-content;
+}
+
+/*yellow stripes CSS---------------------------------*/
+.section::after{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    
+    
+    bottom:4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section2::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(-50%);
+    top:0px;
+    left: 50%;
+    margin-bottom: 100px;
+   
+}
+.section1::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(50%);
+    bottom:0px;
+    left: 50%;
+    
+   
+}
+.section3::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(-50%);
+    top:0px;
+    left: 50%;
+    
+   
+}
+.section2::after{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(50%);
+    bottom:0px;
+    left: 50%;
+    
+   
+}
+.section3::after{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(50%);
+    bottom:0px;
+    left: 50%;
+    
+   
+}
+.section4::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(-50%);
+    top:0px;
+    left: 50%;
+    z-index: 3;
+   
+}
+.section4::after{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(50%);
+    bottom:0px;
+    left: 50%;
+    z-index: 3;
+   
+}
+.section5::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(-50%);
+    top:0px;
+    left: 50%;
+    z-index: 3;
+   
+}
+.section5::after{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(50%);
+    bottom:0px;
+    left: 50%;
+    z-index: 3;
+   
+}
+.section6::before{
+    
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: var(--buttonColor);
+    transform: translateY(-50%);
+    top:0px;
+    left: 50%;
+    z-index: 3;
+   
+}
+
+@media screen  and (max-width: 1300px) {
+    .programmes-grid{
+        position: relative;
+        display: grid;
+        width:80%;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "programmes-area"
+        "licenses-area"
+        "masters-area"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 40px;
+        padding-bottom:100px;
+    
+    
+    }
+    .licenses-area{
+        
+        grid-area: licenses-area;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        
+        min-width: 6.25em;
+        width: 100%;
+        min-height:12.5em;
+        height:100%; 
+    }
+    .masters-area{
+        grid-area: masters-area;
+        display: flex;
+        justify-content: center;
+       
+        justify-self: center;
+        min-width: 6.25em;
+        width: 100%;
+        min-height: 12.5em;
+        height:100%; 
+    }
+
+
+    .why-grid{
+        position: relative;
+        width:80%;
+        
+        display: grid;
+      
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto max-content auto auto;
+        grid-template-areas: 
+        "title-area"
+        "left-area"
+        "formation"
+        "right-area"
+        "presentation"
+        ;
+       
+        padding-bottom:100px;
+       
+        margin-left: auto;
+        margin-right: auto;
+        gap: 40px;
+    }
+    .formation{
+        grid-area: formation;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: center;
+        height: inherit;
+        min-width: 6.25em;
+        width: 100%;
+        
+    }
+    .presentation{
+        grid-area: presentation;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: center;
+        height: inherit;
+        min-width:6.25em;
+        width: 100%;
+        
+    }
+    .process-grid{
+        display: grid;
+        position: relative;
+        
+        width: 80%;
+        grid-template-columns: 1fr ;
+        grid-template-rows:auto auto auto auto ;
+        grid-template-areas: 
+        "title3"
+        "area1"
+        "area2"
+        "area3"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+        gap:60px;
+        padding-bottom: 100px;
+       
+    }
+
+    .campus-grid{
+        display: grid;
+        width: 80%;
+        grid-template-columns: 1f ;
+        grid-template-rows: auto auto;
+    
+        grid-template-areas: 
+        "title4"
+        "first-area" 
+        "second-area" 
+        "third-area" 
+        "fourth-area"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        gap:40px;
+        padding-bottom: 100px;
+    }
+
+
+    .inscription-grid{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+    
+        grid-template-areas: 
+        "title5"
+        "first-area1"
+        "second-area1"
+        "third-area1"
+        "fourth-area1"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        gap:40px;
+        padding-bottom: 100px;
+    }
+
+
+    .contacts-grid{
+        display: grid;
+        width: 80%;
+        grid-template-columns: 1fr ;
+        grid-template-rows:auto auto  ;
+        grid-template-areas: 
+        "title6 "
+        "logo-area" 
+        "contacts-area" 
+        "socials-area"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+        gap:60px;
+        padding-bottom: 100px;
+    }
+    .caroussel__nav{
+        position: absolute;
+        
+       bottom:22%;
+        width: 100%;
+       display: flex;
+       justify-content: center;
+       padding: 5px 0;
+       z-index: 6;
+        
+    }
+}
+
+
+
+
+/*--------------------NAVBAR--------------------*/
+
+
+.navbar{
+    position: absolute;
+    width:100%;
+   
+    top: 0;
+    
+     flex-wrap: wrap;
+     height: 180px;
+     background-color:transparent;
+     display: flex;
+
+     padding: 0%;
+     -webkit-box-shadow: 5px 5px 0px -1px var(--mainShadowColor); 
+     box-shadow: 5px 5px 0px -1px var(--mainShadowColor);
+     transition: background-color 0.7s;
+    
+    z-index: 2;
+    clip-path: polygon(0 0, 0 150px, 50% 100%, 100% 150px, 100% 0);
+ }
+ .nav-front{
+   
+   position: absolute;
+   width:100%;
+    height: 100px;
+   
+   top:40px;
+   
+    
+  
+   
+ }
+
+
+ .logo{
+     position: absolute;
+     height: fit-content;
+     display: flex;
+     left: 15%;
+     
+        width: 180px;
+        height: 90px;
+   
+ }
+ .logo img{
+     width: 100%;
+     height: 100%;
+     margin: 15px;
+ }
+ .tabs-container{
+     position: absolute;
+     display: flex;
+     align-items: center;
+     width: 35%;
+     height: 100%;
+     justify-content: space-around;
+     right: 15%;
+     
+ }
+ 
+ 
+ .tab{
+     position: relative;
+     height: 100%;
+     padding-inline: 10px;
+     display: flex;
+    align-items: center;
+     justify-content: center;
+     overflow: hidden;
+    
+     
+ 
+    
+ }
+ #link_bg {
+   position: absolute;
+   height:100%;
+   width: 100%;
+   
+   
+   
+  
+   
+ }
+ .link{
+   z-index: 2;
+   color: white;
+ }
+ .tab:hover{
+   cursor: pointer;
+ }
+ .tab:hover > #link_bg{
+   
+   
+  
+   
+   
+ } 
+
+ 
+ .tab:hover > .link{
+   transition: .4s;
+   color: var(--buttonColor);
+ }
+ span{
+     color: var(--mainTextColor);
+     
+   
+ }
+ 
+ /* Burger button css ------------------------------------------------------------------*/ 
+ .burger{
+    height:fit-content;
+   display: none;
+   margin-right:10%;
+   cursor: pointer;
+ }
+ .burger div{
+   width:25px;
+   height: 3px;
+   background-color: var(--mainTextColor);
+   margin: 5px;
+   border:1px solid rgba(255, 217, 3, 0.664);
+
+   
+ }
+ #cont{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+ }
+ 
+ 
+ @media screen and (max-width:1250px) {
+   body{
+     overflow-x:hidden ;
+   }
+   .navbar{
+       
+       position: fixed;
+       height: 100px;
+       clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+   }
+   
+   .navbaractive{
+    height: 100vh;
+   }
+   .tabs-container{
+     position: absolute;
+     left: 0px;
+    
+     top: 60px;
+     background-color: transparent;
+     display: flex;
+     
+     margin: 0%;
+     flex-direction: column;
+
+     height:80%;
+     width: 50%;
+     transform: translateY(-400%);
+     
+        opacity: 0;
+    
+     transition: transform 0.4s ;
+ 
+   }
+   .logo{
+        position: absolute;
+       
+        width: 100px;
+        height: 50px;
+        display: flex;
+        left: 10%;
+        transform: translateY(-25%);
+      
+   }
+   .logo img{
+    width: 100%;
+    height: 100%;
+    margin: 2px;
+}
+   .burger{
+       position: absolute;
+     display:block;
+     width: fit-content;
+     right: 10%;
+     margin-right: 0%;
+     z-index: 2;
+   }
+   .nav-front{
+    position: absolute;
+   
+     width:100%;
+    
+    
+    
+     transition: height .4s;
+   }
+   .navfrontactive{
+    height:100%;
+   }
+  
+   
+   .tab{
+     width: 100%;
+     display: flex;
+     justify-content: start;
+     left:20% ;
+   }
+   
+   
+   
+ }
+ 
+ .burger-active{
+   
+   transform: translateX(0%);
+   opacity: 1;
+   transition:   0.3s ;
+ }
+ .navbg{
+     background-color: var(--navMainColor);
+ }
+ 
+ /* ------------------------------------------------------------------ Burger button css*/ 
+ 
+ 
+ 
+ 
